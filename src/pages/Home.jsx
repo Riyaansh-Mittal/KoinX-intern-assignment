@@ -8,6 +8,7 @@ import { IoTriangleSharp } from "react-icons/io5";
 import TradingViewWidget from "../components/TradingView_Graph/TradingViewWidget";
 import Tabs from '../components/tabs/Tabs';
 import { useSelector } from "react-redux";
+import StyleBox from "../components/StyleBox";
 
 const Home = () => {
   const [bitcoinData, setBitcoinData] = useState(null);
@@ -58,7 +59,7 @@ const Home = () => {
       <Breadcrumb path="/Cryptocurrencies/Bitcoin" />
       <div className="container space-x-4">
         <div className="space-y-9">
-          <div className="bitcoin-block">
+          <StyleBox>
             <div className="flex flex-row items-center space-x-5">
               <div className="flex flex-row items-center space-x-2">
                 <FaBitcoin size={30} color="#ef9115" />{" "}
@@ -96,7 +97,7 @@ const Home = () => {
               ₹{bitcoinData && bitcoinData.inr.toLocaleString()}
             </h5>
             <TradingViewWidget />
-          </div>
+          </StyleBox>
           <Tabs />
         </div>
 
@@ -119,7 +120,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="bitcoin-block space-y-5">
+          <StyleBox className="space-y-5">
             <h2 className="trending-coins font-bold font-sans">
             {strings.trending_coins}
             </h2>
@@ -156,7 +157,7 @@ const Home = () => {
                   </div>
                 </div>
               ))}
-          </div>
+          </StyleBox>
         </div>
       </div>
     </Root>
@@ -169,12 +170,6 @@ const Root = styled.div`
   .container {
     display: grid;
     grid-template-columns: 68% 32%;
-  }
-
-  .bitcoin-block {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
   }
 
   .blue-block {
