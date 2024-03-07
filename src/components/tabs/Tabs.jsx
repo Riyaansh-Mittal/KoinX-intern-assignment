@@ -6,21 +6,22 @@ import Sentimentals from "./Sentimentals";
 import Team from "./Team";
 import Technicals from "./Technicals";
 import Tokenomics from "./Tokenomics";
+import { useSelector } from "react-redux";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  const strings = useSelector((state) => state.platformSettings.strings);
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
   const tabs = [
-    { label: "Overview", content: <Overview /> },
-    { label: "Fundamentals", content: <Fundamentals /> },
-    { label: "New Insights", content: <NewInsights /> },
-    { label: "Sentimentals", content: <Sentimentals /> },
-    { label: "Team", content: <Team /> },
-    { label: "Technicals", content: <Technicals /> },
-    { label: "Tokenomics", content: <Tokenomics/> },
+    { label: strings.tabs.overview, content: <Overview /> },
+    { label: strings.tabs.fundamentals, content: <Fundamentals /> },
+    { label: strings.tabs.newinsights, content: <NewInsights /> },
+    { label: strings.tabs.sentimentals, content: <Sentimentals /> },
+    { label: strings.tabs.team, content: <Team /> },
+    { label: strings.tabs.technicals, content: <Technicals /> },
+    { label: strings.tabs.tokenomics, content: <Tokenomics /> },
   ];
 
   return (

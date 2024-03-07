@@ -7,9 +7,11 @@ import { FaBitcoin } from "react-icons/fa6";
 import { IoTriangleSharp } from "react-icons/io5";
 import TradingViewWidget from "../components/TradingView_Graph/TradingViewWidget";
 import Tabs from '../components/tabs/Tabs';
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [bitcoinData, setBitcoinData] = useState(null);
+  const strings = useSelector((state) => state.platformSettings.strings);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,7 +62,7 @@ const Home = () => {
             <div className="flex flex-row items-center space-x-5">
               <div className="flex flex-row items-center space-x-2">
                 <FaBitcoin size={30} color="#ef9115" />{" "}
-                <h2 className="font-medium text-2xl">Bitcoin</h2>
+                <h2 className="font-medium text-2xl">{strings.bitcoin_block.bitcoin}</h2>
                 <h2
                   style={{
                     color: "#7c7a7a",
@@ -68,11 +70,11 @@ const Home = () => {
                     fontWeight: "500",
                   }}
                 >
-                  BTC
+                  {strings.bitcoin_block.bitcoin_code}
                 </h2>
               </div>
               <div className="rounded-lg bg-slate-500 p-2 text-white">
-                Rank #1
+              {strings.bitcoin_block.rank1}
               </div>
             </div>
             <div className="pt-7 pb-1 flex flex-row space-x-6 items-center">
@@ -87,7 +89,7 @@ const Home = () => {
                     {bitcoinData && bitcoinData.usd_24h_change.toFixed(2)}%
                   </span>
                 </div>
-                <span className="text-sm text-gray-500">(24H)</span>
+                <span className="text-sm text-gray-500">{strings.bitcoin_block.h24}</span>
               </div>
             </div>
             <h5 className="flex flex-row items-center text-sm font-medium">
@@ -101,11 +103,10 @@ const Home = () => {
         <div className="space-y-4">
           <div className="blue-block">
             <h2 className="title font-mono m-2">
-              Get Started with KoinX for FREE
+            {strings.get_started.title}
             </h2>
             <p className="mx-4 my-2">
-              With our range of features that you can equip for free, KoinX
-              allows you to be more educated and aware of your tax reports
+            {strings.get_started.desc}
             </p>
             <div className="flex flex-wrap space-y-3 justify-center my-3">
               <img
@@ -114,13 +115,13 @@ const Home = () => {
                 style={{ height: "120px", width: "140px" }}
               />{" "}
               <button className="flex flex-row items-center justify-center space-x-2 bg-white text-black rounded-md p-2 font-medium px-6">
-                <span>{"Get Started for FREE"}</span> <FaArrowRightLong />
+                <span>{strings.get_started.button}</span> <FaArrowRightLong />
               </button>
             </div>
           </div>
           <div className="bitcoin-block space-y-5">
             <h2 className="trending-coins font-bold font-sans">
-              Trending Coins (24h)
+            {strings.trending_coins}
             </h2>
             {trendingCoins &&
               trendingCoins.map((coin) => (
