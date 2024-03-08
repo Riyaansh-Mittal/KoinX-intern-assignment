@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { FaBitcoin } from "react-icons/fa6";
 import { IoTriangleSharp } from "react-icons/io5";
 import TradingViewWidget from "../components/TradingView_Graph/TradingViewWidget";
-import Tabs from '../components/tabs/Tabs';
+import Tabs from "../components/tabs/Tabs";
 import { useSelector } from "react-redux";
 import StyleBox from "../components/StyleBox";
 
@@ -63,7 +63,9 @@ const Home = () => {
             <div className="flex flex-row items-center space-x-5">
               <div className="flex flex-row items-center space-x-2">
                 <FaBitcoin size={30} color="#ef9115" />{" "}
-                <h2 className="font-medium text-2xl">{strings.bitcoin_block.bitcoin}</h2>
+                <h2 className="font-medium text-2xl">
+                  {strings.bitcoin_block.bitcoin}
+                </h2>
                 <h2
                   style={{
                     color: "#7c7a7a",
@@ -75,7 +77,7 @@ const Home = () => {
                 </h2>
               </div>
               <div className="rounded-lg bg-slate-500 p-2 text-white">
-              {strings.bitcoin_block.rank1}
+                {strings.bitcoin_block.rank1}
               </div>
             </div>
             <div className="pt-7 pb-1 flex flex-row space-x-6 items-center">
@@ -90,7 +92,9 @@ const Home = () => {
                     {bitcoinData && bitcoinData.usd_24h_change.toFixed(2)}%
                   </span>
                 </div>
-                <span className="text-sm text-gray-500">{strings.bitcoin_block.h24}</span>
+                <span className="text-sm text-gray-500">
+                  {strings.bitcoin_block.h24}
+                </span>
               </div>
             </div>
             <h5 className="flex flex-row items-center text-sm font-medium">
@@ -103,12 +107,8 @@ const Home = () => {
 
         <div className="space-y-4">
           <div className="blue-block">
-            <h2 className="title font-mono m-2">
-            {strings.get_started.title}
-            </h2>
-            <p className="mx-4 my-2">
-            {strings.get_started.desc}
-            </p>
+            <h2 className="title font-mono m-2">{strings.get_started.title}</h2>
+            <p className="mx-4 my-2">{strings.get_started.desc}</p>
             <div className="flex flex-wrap space-y-3 justify-center my-3">
               <img
                 src="./Images/Screenshot_8.png"
@@ -120,43 +120,45 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <StyleBox className="space-y-5">
-            <h2 className="trending-coins font-bold font-sans">
-            {strings.trending_coins}
-            </h2>
-            {trendingCoins &&
-              trendingCoins.map((coin) => (
-                <div
-                  className="flex flex-row items-center justify-between"
-                  key={coin.item.id}
-                >
-                  <div className="flex flex-row items-center space-x-2">
-                    <img
-                      src={coin.item.large}
-                      alt={coin.item.name}
-                      style={{
-                        height: "30px",
-                        width: "30px",
-                        cursor: "pointer",
-                      }}
-                    />
-                    <h2 className="font-medium">
-                      {coin.item.name}({coin.item.symbol})
-                    </h2>
-                  </div>
+          <StyleBox>
+            <div className="space-y-5">
+              <h2 className="trending-coins font-bold font-sans">
+                {strings.trending_coins}
+              </h2>
+              {trendingCoins &&
+                trendingCoins.map((coin) => (
+                  <div
+                    className="flex flex-row items-center justify-between"
+                    key={coin.item.id}
+                  >
+                    <div className="flex flex-row items-center space-x-2">
+                      <img
+                        src={coin.item.large}
+                        alt={coin.item.name}
+                        style={{
+                          height: "30px",
+                          width: "30px",
+                          cursor: "pointer",
+                        }}
+                      />
+                      <h2 className="font-medium">
+                        {coin.item.name}({coin.item.symbol})
+                      </h2>
+                    </div>
 
-                  <div className="rate flex flex-row items-center text-green-600 rounded-sm space-x-1.5 px-2">
-                    {" "}
-                    <IoTriangleSharp size={9} />
-                    <span className="text-sm">
-                      {coin.item.data.price_change_percentage_24h.aed.toFixed(
-                        2
-                      )}
-                      %
-                    </span>
+                    <div className="rate flex flex-row items-center text-green-600 rounded-sm space-x-1.5 px-2">
+                      {" "}
+                      <IoTriangleSharp size={9} />
+                      <span className="text-sm">
+                        {coin.item.data.price_change_percentage_24h.aed.toFixed(
+                          2
+                        )}
+                        %
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </StyleBox>
         </div>
       </div>
