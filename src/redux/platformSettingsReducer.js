@@ -57,6 +57,10 @@ const initialState = {
         },
       ],
     },
+    sentiments: {
+      key_events: "Key Events",
+      sentiment: "Sentiment",
+    },
     header: {
       crypto_taxes: "Crypto Taxes",
       free_tools: "Free Tools",

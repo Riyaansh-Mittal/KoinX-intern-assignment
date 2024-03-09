@@ -9,6 +9,7 @@ import TradingViewWidget from "../components/TradingView_Graph/TradingViewWidget
 import Tabs from "../components/tabs/Tabs";
 import { useSelector } from "react-redux";
 import StyleBox from "../components/StyleBox";
+import Sentiments from "../components/tabs/Sentiments";
 
 const Home = () => {
   const [bitcoinData, setBitcoinData] = useState(null);
@@ -103,6 +104,7 @@ const Home = () => {
             <TradingViewWidget />
           </StyleBox>
           <Tabs />
+          <Sentiments />
         </div>
 
         <div className="space-y-4">
