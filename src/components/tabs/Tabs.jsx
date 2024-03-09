@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Overview from "./Overview";
 import Fundamentals from "./Fundamentals";
 import NewInsights from "./NewInsights";
-import Sentiments from "./Sentimentals";
+import Sentiments from "./Sentiments";
 import Team from "./Team";
 import Technicals from "./Technicals";
 import Tokenomics from "./Tokenomics";

@@ -3,13 +3,14 @@ import { useSelector } from "react-redux";
 import StyleBox from "../StyleBox";
 import Info from "../Info";
 
-const Fundamentals = () => {
+const Sentiments = () => {
   const strings = useSelector((state) => state.platformSettings.strings);
   return (
     <StyleBox>
-      <div className="space-y-4">
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold black">Sentiment</h2>
         <div className="flex flex-row items-center space-x-2">
-          <h2 className="text-xl font-semibold text-slate-900">{strings.tabs.fundamentals}</h2>
+          <h2 className="text-lg font-semibold text-slate-700">Key Events</h2>
           <Info />
         </div>
         <div
@@ -18,7 +19,7 @@ const Fundamentals = () => {
             gridAutoFlow: "row",
             gridTemplateColumns: "1fr 1fr",
             gridColumnGap: "90px",
-            paddingBottom: "20px"
+            paddingBottom: "20px",
           }}
         >
           {strings.fundamentals.table.map(
@@ -55,10 +56,29 @@ const Fundamentals = () => {
               );
             }
           )}
+          {/* {strings.fundamentals.allTime.map(
+            ({ key, title, date, rate, amount }) => {
+              return (
+                <div key={key}>
+                  <div className="flex flex-row justify-between">
+                    <p className="text-xs text-slate-500 font-medium">{title}</p>
+                    <div className="">
+                      <div className="flex flex-row items-center justify-end space-x-1">
+                        <p className="text-xs font-medium">{`$${amount}`}</p>
+                        <p className="text-xs font-medium">{`${rate}`}</p>
+                      </div>
+                      <p className="text-xs font-medium">{date}</p>
+                    </div>
+                  </div>
+                  <hr className="my-2 border-t border-slate-300" />
+                </div>
+              );
+            }
+          )} */}
         </div>
       </div>
     </StyleBox>
   );
 };
 
-export default Fundamentals;
+export default Sentiments;
