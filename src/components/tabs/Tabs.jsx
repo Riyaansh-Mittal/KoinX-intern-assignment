@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Overview from "./Overview";
 import Fundamentals from "./Fundamentals";
 import NewInsights from "./NewInsights";
-import Sentimentals from "./Sentimentals";
+import Sentiments from "./Sentimentals";
 import Team from "./Team";
 import Technicals from "./Technicals";
 import Tokenomics from "./Tokenomics";
@@ -18,7 +18,7 @@ const Tabs = () => {
     { label: strings.tabs.overview, content: <Overview /> },
     { label: strings.tabs.fundamentals, content: <Fundamentals /> },
     { label: strings.tabs.newinsights, content: <NewInsights /> },
-    { label: strings.tabs.sentimentals, content: <Sentimentals /> },
+    { label: strings.tabs.sentiments, content: <Sentiments /> },
     { label: strings.tabs.team, content: <Team /> },
     { label: strings.tabs.technicals, content: <Technicals /> },
     { label: strings.tabs.tokenomics, content: <Tokenomics /> },

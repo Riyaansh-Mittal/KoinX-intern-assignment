@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Sentimentals = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const Sentiments = () => {
+  return <div></div>;
+};
 
-export default Sentimentals
+export default Sentiments;
