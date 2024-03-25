@@ -1,4 +1,4 @@
-## KoinX - Bitcoin Information Page
+# KoinX - Bitcoin Information Page
 Welcome to KoinX, a webpage dedicated to providing comprehensive information about Bitcoin. This repository contains the source code for the KoinX webpage, which was developed as an assignment. KoinX is built using HTML, CSS, and JavaScript, with the integration of various libraries and tools such as Tailwind CSS, Styled Components, Redux, Axios, and third-party APIs to fetch relevant data.
 
 # Features
