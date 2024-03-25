@@ -1,3 +1,20 @@
+## KoinX - Bitcoin Information Page
+Welcome to KoinX, a webpage dedicated to providing comprehensive information about Bitcoin. This repository contains the source code for the KoinX webpage, which was developed as an assignment. KoinX is built using HTML, CSS, and JavaScript, with the integration of various libraries and tools such as Tailwind CSS, Styled Components, Redux, Axios, and third-party APIs to fetch relevant data.
+
+# Features
+Bitcoin Information: Get detailed information about Bitcoin, including current price, market trends, historical data, and more.
+Breadcrumbs: Navigate through different sections of the page effortlessly with the breadcrumbs feature.
+Carousel: View dynamic content and updates through an interactive carousel.
+Range Bar: Adjust and customize data ranges for analysis and visualization.
+TradingView Widget: Access live charts and technical analysis tools provided by TradingView.
+Third-party API Integration: Utilize third-party APIs to fetch real-time data and enhance the user experience.
+# Technologies Used
+HTML, CSS, JavaScript: Core technologies for building web pages and adding interactivity.
+Tailwind CSS: A utility-first CSS framework for creating custom designs quickly.
+Styled Components: A CSS-in-JS library for styling web components with scoped styles.
+Redux: A predictable state container for managing application state.
+Axios: A promise-based HTTP client for making asynchronous requests to servers.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
