@@ -7,13 +7,13 @@ Welcome to KoinX, a webpage dedicated to providing comprehensive information abo
 **Carousel**: View dynamic content and updates through an interactive carousel.\
 **Range Bar**: Adjust and customize data ranges for analysis and visualization.\
 **TradingView Widget**: Access live charts and technical analysis tools provided by TradingView.\
-**Third-party API Integration**: Utilize third-party APIs to fetch real-time data and enhance the user experience.\
+**Third-party API Integration**: Utilize third-party APIs to fetch real-time data and enhance the user experience.
 # Technologies Used
 **React**: Core technology used in this project for building web page and adding interactivity.\
 **Tailwind CSS**: A utility-first CSS framework for creating custom designs quickly.\
 **Styled Components**: A CSS-in-JS library for styling web components with scoped styles.\
 **Redux**: A predictable state container for managing application state. It is used to store all the text used in website and themes so that it's easy to update the UI.\
-**Axios**: A promise-based HTTP client for making asynchronous requests to servers.\
+**Axios**: A promise-based HTTP client for making asynchronous requests to servers.
 
 # Getting Started with Create React App
 
